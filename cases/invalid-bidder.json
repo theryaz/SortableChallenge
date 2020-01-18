@@ -1,0 +1,59 @@
+[
+  {
+    "site": "play.threeswithfriends.com",
+    "units": [ "banner", "sidebar" ],
+    "bids": [
+      {
+        "bidder": "AUCT",
+        "unit": "banner",
+        "bid": 65
+      },
+      {
+        "bidder": "LAWSO",
+        "unit": "banner",
+        "bid": 55
+      },
+      {
+        "bidder": "AUCT",
+        "unit": "sidebar",
+        "bid": 65
+      },
+      {
+        "bidder": "LAWSO",
+        "unit": "sidebar",
+        "bid": 55
+      },
+      {
+        "bidder": "INVALID",
+        "unit": "sidebar",
+        "bid": 85
+      }
+    ]
+  },
+  {
+    "site": "play.threeswithfriends.com",
+    "units": [ "banner", "sidebar" ],
+    "bids": [
+      {
+        "bidder": "AUCT",
+        "unit": "banner",
+        "bid": 65
+      },
+      {
+        "bidder": "LAWSO",
+        "unit": "banner",
+        "bid": 55
+      },
+      {
+        "bidder": "AUCT",
+        "unit": "sidebar",
+        "bid": 65
+      },
+      {
+        "bidder": "LAWSO",
+        "unit": "sidebar",
+        "bid": 55
+      }
+    ]
+  }
+]

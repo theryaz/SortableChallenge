@@ -11,10 +11,10 @@ class AuctionRunner:
       self.bidders[bidder["name"]] = bidder
 
   def canBidOnSite(self, siteName, bidderName):
-    if siteName in self.sites[siteName]["bidders"]:
-      return False
-    else:
+    if bidderName in self.sites[siteName]["bidders"]:
       return True
+    else:
+      return False
 
   def getAdjustedPrice(self, bid):
     if bid["bidder"] not in self.bidders:
@@ -37,7 +37,7 @@ class AuctionRunner:
     descendingBids.sort(reverse = True, key = lambda bid: self.sortBidsDesc(bid))
 
     try:
-      floorIndex = descendingBids.index(lambda bid: self.getAdjustedPrice(bid) <= siteConfig["floor"])
+      floorIndex = next(i for i,bid in enumerate(descendingBids) if self.getAdjustedPrice(bid) <= siteConfig["floor"])
     except:
       floorIndex = len(descendingBids)
 
