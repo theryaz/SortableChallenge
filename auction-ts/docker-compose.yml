@@ -1,0 +1,8 @@
+version: "3"
+services:
+  auction:
+    image: node:13.6.0-alpine
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: npm start

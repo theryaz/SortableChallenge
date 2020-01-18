@@ -1,0 +1,32 @@
+{
+    "sites": [
+        {
+            "name": "houseofcheese.com",
+            "bidders": ["AUCT", "BIDD"],
+            "floor": 32
+        },
+        {
+            "name": "play.threeswithfriends.com",
+            "bidders": ["AUCT", "RYAN", "LAWSO"],
+            "floor": 50
+        }
+    ],
+    "bidders": [
+        {
+            "name": "AUCT",
+            "adjustment": -0.0625
+        },
+        {
+            "name": "BIDD",
+            "adjustment": 0
+        },
+        {
+            "name": "RYAN",
+            "adjustment": -0.05
+        },
+        {
+            "name": "LAWSO",
+            "adjustment": 0.02
+        }
+    ]
+}

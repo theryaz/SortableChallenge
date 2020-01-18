@@ -1,0 +1,54 @@
+[
+  {
+    "site": "play.threeswithfriends.com",
+    "units": [ "banner", "sidebar" ],
+    "bids": [
+      {
+        "bidder": "LAWSO",
+        "unit": "banner",
+        "bid": 65
+      },
+      {
+        "bidder": "LAWSO",
+        "unit": "banner",
+        "bid": 55
+      },
+      {
+        "bidder": "INVALID",
+        "unit": "sidebar",
+        "bid": 85
+      },
+      {
+        "bidder": "AUCT",
+        "unit": "sidebar",
+        "bid": 105
+      },
+      {
+        "bidder": "LAWSO",
+        "unit": "sidebar",
+        "bid": 65
+      },
+      {
+        "bidder": "LAWSO",
+        "unit": "sidebar",
+        "bid": 96
+      }
+    ]
+  },
+  {
+    "site": "wifinear.me",
+    "units": [ "sidebar" ],
+    "bids": [
+      {
+        "bidder": "LAWSO",
+        "unit": "sidebar",
+        "bid": 65
+      },
+      {
+        "bidder": "LAWSO",
+        "unit": "sidebar",
+        "bid": 65
+      }
+    ]
+  }
+]

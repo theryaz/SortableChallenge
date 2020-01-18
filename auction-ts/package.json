@@ -1,0 +1,19 @@
+{
+  "name": "auction",
+  "version": "1.0.0",
+  "main": "main.ts",
+  "description": "Sortable auction coding challenge",
+  "scripts": {
+    "start": "nodemon --watch 'src/model/AuctionRunner.ts' --exec 'ts-node src/main.ts < src/input.json'",
+    "build": "tsc"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^13.1.8",
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  },
+  "author": "Ryan Lawson",
+  "license": "ISC"
+}
