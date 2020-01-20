@@ -22,6 +22,27 @@
               "bidder": "INVALID",
               "unit": "sidebar",
               "bid": 55
+          },
+          {
+              "bidder": "AUCT",
+              "unit": "invalid",
+              "bid": 200
+          }
+      ]
+  },
+  {
+      "site": "houseofcheese.com",
+      "units": ["banner", "sidebar"],
+      "bids": [
+          {
+              "bidder": "AUCT",
+              "unit": "invalid",
+              "bid": 153
+          },
+          {
+              "bidder": "INVALID",
+              "unit": "sidebar",
+              "bid": 55
           }
       ]
   }

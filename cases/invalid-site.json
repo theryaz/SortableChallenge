@@ -19,6 +19,16 @@
         "bid": 85
       },
       {
+        "bidder": "BIDD",
+        "unit": "sidebar",
+        "bid": 48
+      },
+      {
+        "bidder": "AUCT",
+        "unit": "sidebar",
+        "bid": 45
+      },
+      {
         "bidder": "AUCT",
         "unit": "sidebar",
         "bid": 105

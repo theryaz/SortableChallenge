@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs';
 
-import auctionRunner from './model/AuctionRunner';
+import auctionRunner from './AuctionRunner';
 
 const inputAuctions = JSON.parse(readFileSync(0).toString());
 

@@ -4,7 +4,7 @@
   "main": "main.ts",
   "description": "Sortable auction coding challenge",
   "scripts": {
-    "start": "nodemon --watch 'src/model/AuctionRunner.ts' --exec 'ts-node src/main.ts < src/input.json'",
+    "start": "nodemon --watch 'src/AuctionRunner.ts' --exec 'ts-node src/main.ts < ../cases/invalid-site.json'",
     "build": "tsc"
   },
   "dependencies": {},

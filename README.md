@@ -6,11 +6,9 @@
 ```
 # Build & Run
 
-cd auction-ts
+docker build -t auction-ts auction-ts
 
-docker build -t auction-ts .
-
-docker run --rm -i auction-ts < ../input.json
+docker run --rm -i auction-ts < input.json
 ```
 
 ## Python
@@ -19,9 +17,7 @@ docker run --rm -i auction-ts < ../input.json
 ```
 # Build & Run
 
-cd auction-py
-
-docker build -t auction-py .
+docker build -t auction-py auction-py
 
 docker run --rm -i auction-py < ../input.json
 ```

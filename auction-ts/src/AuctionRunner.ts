@@ -1,6 +1,6 @@
-import { Bid, Bidder, Site, Auction, Configuration} from '../interfaces';
+import { Bid, Bidder, Site, Auction, Configuration} from './interfaces';
 
-const cfg: Configuration = require('../config.json');
+const cfg: Configuration = require('./config.json');
 
 class AuctionRunner{
   
@@ -15,10 +15,11 @@ class AuctionRunner{
       this.bidders[bidder.name] = bidder;
     }
   }
-  private canBidOnSite(siteName: string, bidderName: string){
+  private canBidOnSite(siteName: string, bid: Bid){
     const site = this.sites[siteName];
-    if(!site) return false;
-    return site.bidders.indexOf(bidderName) !== -1;
+    if(site.bidders.indexOf(bid.bidder) === -1) return false; // Bidder not valid for site
+    if(site.floor >= this.getAdjustedPrice(bid)) return false; // Adjusted Bid is too low for site
+    return true;
   }
   private getAdjustedPrice(bid: Bid): number{
     const bidder = this.bidders[bid.bidder];
@@ -37,21 +38,15 @@ class AuctionRunner{
 
     const winningBids = [];
     
-    const descendingBids = auction.bids
-    .filter(bid => this.canBidOnSite(siteConfig.name, bid.bidder))
+    const descendingValidBids = auction.bids
+    .filter(bid => this.canBidOnSite(siteConfig.name, bid))
     .sort(this.sortBidsDesc);
 
-    let floorIndex = descendingBids.findIndex(bid => this.getAdjustedPrice(bid) <= siteConfig.floor);
-    if(floorIndex === -1) floorIndex = descendingBids.length;
-
-    const remainingUnits = [...auction.units];
-    for(let i = 0; i < floorIndex; i++){
-      const unitIndex = remainingUnits.indexOf(descendingBids[i].unit);
-      if(unitIndex !== -1){
-        winningBids.push(descendingBids[i]);
-        remainingUnits.splice(unitIndex, 1);
-        if(remainingUnits.length === 0) break;
-      }
+    for(let unit of auction.units){
+      const winnerIndex = descendingValidBids.findIndex(bid => bid.unit === unit);
+      if(winnerIndex === -1) continue; // No valid bid for this unit
+      winningBids.push(descendingValidBids[winnerIndex]);
+      descendingValidBids.splice(winnerIndex, 1);
     }
 
     return winningBids;

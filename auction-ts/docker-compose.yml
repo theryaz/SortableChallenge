@@ -4,5 +4,6 @@ services:
     image: node:13.6.0-alpine
     volumes:
       - .:/app
+      - ../cases:/cases
     working_dir: /app
     command: npm start
